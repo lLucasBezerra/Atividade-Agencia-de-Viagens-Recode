@@ -1,0 +1,116 @@
+/* fonte para logo, navbar e paragrafos */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;600;700&display=swap');
+/* fonte titulo */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* .background{
+    background-color: var(--cor-bg);
+} */
+:root{
+    --cor-p:;
+    --cor-s: #45B39D;
+    --cor-t: #D1F2EB;
+    /* --cor-bg: #324a61da ; */
+    --font-logo: 'Bebas Neue', cursive;
+    --font-titulo: 'Hind', sans-serif;
+    --font-principal: 'Poppins', sans-serif;
+}
+.titulo{
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+p{
+    font-family: var(--font-principal);
+    font-weight: 600;
+}
+/* 
+    não consegui fazer com grid :(
+    .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20vh 1fr 1fr 1fr;
+    grid-template-areas: 
+    " h h h h"
+    "m m m m"
+    ;
+} */
+
+/* NAVBAR--------------------------- */
+header{
+    display: flex;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url(./img/Nuvens.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 15vh;
+    align-items: flex-end;
+    /* grid-area: h; */
+}
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 4% 3% 10px 3%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.logo{
+    text-decoration: none;
+    color: #fff;
+    font-size: 200px;
+    font-family: var(--font-logo);
+}
+.navHub{
+    display: flex;
+    padding-top: 0.5em;
+    
+}
+.navHub li{
+    list-style: none;
+}
+.navHub a{
+    color:#fff;
+    font-family: var(--font-principal);
+    font-size: 1em;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.navHub li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-s);
+    display: block;
+    margin: auto;
+}
+.navHub li:hover::after{
+    width: 80%;
+    margin-left: 20%;
+    transition: .3s;
+}
+.navbar a:hover{
+    color: rgb(233, 233, 233);
+    transition: .3s;
+}
+
+/* CONTEUDO ------------------------------------------ */
+.main{
+    /* grid-area: m; */
+    height: 100vh;
+    margin-top: 3rem;
+}
+.carrossel{
+    height: 80vh;
+    border-radius: 1%;
+    box-shadow: 0 0 18px rgba(4, 9, 30, 0.2);
+    background-color: var(--cor-s);
+}
