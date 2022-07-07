@@ -8,6 +8,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+.background{
+    background-color: #f4f4f4;
+}
 /* .background{
     background-color: var(--cor-bg);
 } */
@@ -20,31 +23,22 @@
     --font-titulo: 'Hind', sans-serif;
     --font-principal: 'Poppins', sans-serif;
 }
-.titulo{
-    font-family: var(--font-titulo);
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-p{
-    font-family: var(--font-principal);
-    font-weight: 600;
-}
 /* 
-    não consegui fazer com grid :(
+não consegui fazer com grid :(
     .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 20vh 1fr 1fr 1fr;
-    grid-template-areas: 
-    " h h h h"
-    "m m m m"
-    ;
-} */
-
-/* NAVBAR--------------------------- */
-header{
-    display: flex;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20vh 1fr 1fr 1fr;
+        grid-template-areas: 
+        " h h h h"
+        "m m m m"
+        ;
+    } */
+    
+    /* NAVBAR--------------------------- */
+    header{
+        display: flex;
+        background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
     url(./img/Nuvens.jpg);
     background-position: center;
     background-size: cover;
@@ -60,7 +54,7 @@ nav{
     padding: 4% 3% 10px 3%;
     display: flex;
     justify-content: space-between;
-
+    
 }
 .logo{
     text-decoration: none;
@@ -102,6 +96,7 @@ nav{
     transition: .3s;
 }
 
+
 /* CONTEUDO ------------------------------------------ */
 .main{
     /* grid-area: m; */
@@ -113,4 +108,35 @@ nav{
     border-radius: 1%;
     box-shadow: 0 0 18px rgba(4, 9, 30, 0.2);
     background-color: var(--cor-s);
+}
+
+/* explicação da agencia------------- */
+.titulo{
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+p{
+    font-family: var(--font-principal);
+    font-weight: 600;
+}
+strong{
+    color: var(--cor-s);
+}
+.svg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-sm{
+    background-color: #f7fdfc;
+    border-radius: 2%;
+    width: 33%;
+    margin: 15px;
+}
+.col-sm:hover{
+    border: 5px solid var(--cor-s);
+    box-shadow: 0 0 15px rgba(4, 9, 30, 0.5);
+    transition: .5s;
 }
