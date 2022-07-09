@@ -1,0 +1,218 @@
+/* fonte para logo, navbar e paragrafos */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;600;700&display=swap');
+/* fonte titulo */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.background{
+    background-color: #f4f4f4;
+}
+/* .background{
+    background-color: var(--cor-bg);
+} */
+:root{
+    --cor-p: #9be1eb;
+    --cor-s: #45B39D;
+    --cor-t: #D1F2EB;
+    /* --cor-bg: #324a61da ; */
+    --font-logo: 'Bebas Neue', cursive;
+    --font-titulo: 'Hind', sans-serif;
+    --font-principal: 'Poppins', sans-serif;
+}
+/* 
+não consegui fazer com grid :(
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20vh 1fr 1fr 1fr;
+        grid-template-areas: 
+        " h h h h"
+        "m m m m"
+        ;
+    } */
+    
+    /* NAVBAR--------------------------- */
+    header{
+        display: flex;
+        background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.3)),
+    url(./img/Nuvens.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 15vh;
+    align-items: flex-end;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    /* grid-area: h; */
+}
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 4% 3% 10px 3%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    text-decoration: none;
+    color: #fff;
+    /* font-size: 200px; */
+    font-family: var(--font-logo);
+    font-size: clamp(10px, 100px, 200px);
+}
+.navHub{
+    display: flex;
+    padding-top: 0.5em;
+    
+}
+.navHub li{
+    list-style: none;
+}
+.navHub a{
+    color:#fff;
+    font-family: var(--font-principal);
+    font-size: 1em;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.navHub li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: rgb(7,144,105);
+    background: linear-gradient(90deg, rgb(78, 214, 175) 26%, rgb(1, 255, 166) 100%);
+    display: block;
+    margin: auto;
+}
+.navHub li:hover::after{
+    width: 80%;
+    margin-left: 20%;
+    transition: .3s;
+}
+.navbar a:hover{
+    color: rgb(233, 233, 233);
+    transition: .3s;
+}
+
+
+/* CONTEUDO ------------------------------------------ */
+.main{
+    /* grid-area: m; */
+    height: 110vh;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+.carrossel{
+    height: 130vh;
+    border-radius: 1%;
+    box-shadow: 0 0 18px rgba(4, 9, 30, 0.2);
+    background-color: var(--cor-s);
+}
+
+/* cadastro---------- */
+form{
+    margin-top: 1em;
+    padding: 2rem;
+}
+form:hover{
+    background-color: #50bba5;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(4, 9, 30, 0.2);
+    transition: 0.3s;
+}
+.linha{
+    position: relative;
+}
+.linha::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 270px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: rgb(7,144,105);
+    background: linear-gradient(90deg, rgb(87, 243, 199) 26%, rgb(1, 255, 166) 100%);
+}
+.div-form{
+    display: flex;
+    flex-direction: row;
+}
+.input{
+    position: relative;
+}
+.input input{
+    border: none;
+    outline: none;
+    font-family: var(--font-principal);
+    margin-left: 0.3rem;
+    font-size: 1rem;
+    padding: 4px;
+}
+.input input::placeholder{
+    color: rgba(0, 0, 0, 0.425);
+
+}
+.input input:focus{
+    background-color: var(--cor-p);
+    transition: 0.3s;
+}
+form input[type="submit"]{
+    margin-left: 8px;
+    border: none;
+    font-family: var(--font-principal);
+    border-radius: 8px;
+    padding: 4px;
+}
+form input[type="submit"]:hover{
+    background-color: var(--cor-t);
+    transition: 0.3s;
+}
+@media (max-width: 1000px){
+    .div-form{
+        flex-direction: column;
+    }
+}
+/* explicação da agencia------------- */
+.explicacao{
+    margin-top: 100px;
+    position: relative;
+}
+.titulo{
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+p{
+    font-family: var(--font-principal);
+    font-weight: 600;
+}
+strong{
+    color: var(--cor-s);
+}
+.svg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-text{
+    background-color: #f7fdfc;
+    padding: 0.5rem;
+    border-radius: 2%;
+    width: 33%;
+    margin: 15px;
+    transition: 0.5s;
+}
+.col-text:hover{
+    border: 5px solid var(--cor-s);
+    box-shadow: 0 0 15px rgba(4, 9, 30, 0.5);
+    transform: scale(1.1);
+    z-index: 2;
+    
+}
