@@ -24,20 +24,20 @@
     --font-titulo: 'Hind', sans-serif;
     --font-principal: 'Poppins', sans-serif;
 }
-/* 
+/*
 não consegui fazer com grid :(
     .grid{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 20vh 1fr 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
         " h h h h"
         "m m m m"
         ;
     } */
-    
+
     /* NAVBAR--------------------------- */
-    header{        
+    header{
         background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.3)),
     url(./img/Nuvens.jpg);
     background-position: center;
@@ -78,7 +78,7 @@ nav{
     align-items: center;
     justify-content: center;
     list-style: none;
-    
+
 }
 .navHub li a{
     display: inline-block;
@@ -110,7 +110,7 @@ nav a:hover{
 .hamburger{
     width: 30px;
     height: 35px;
-    cursor: pointer; 
+    cursor: pointer;
     display: none;
 }
 .hamburger svg:focus{
@@ -129,7 +129,7 @@ nav a:hover{
         display: none;
         width: 100%;
         flex-direction: column;
-        
+
     }
     .navHub li a{
         font-size: 20px;
@@ -153,19 +153,23 @@ nav a:hover{
 .carrossel{
     height: 130vh;
     border-radius: 1%;
-    box-shadow: 0 0 18px rgba(4, 9, 30, 0.2);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
     background-color: var(--cor-s);
 }
+.img-carrossel{
+    width:100%; 
+    height:500px;
+}
 
-/* cadastro---------- */
-form{
+/* cadastro rápido---------- */
+.cadastro-rapido{
     margin-top: 1em;
     padding: 2rem;
 }
-form:hover{
+.cadastro-rapido:hover{
     background-color: #50bba5;
     border-radius: 30px;
-    box-shadow: 0 0 15px rgba(4, 9, 30, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
 }
 .linha{
@@ -176,7 +180,7 @@ form:hover{
     position: absolute;
     height: 4px;
     width: 270px;
-    bottom: 3px;
+    bottom: 0;
     left: 0;
     border-radius: 8px;
     background: rgb(7,144,105);
@@ -205,20 +209,23 @@ form:hover{
     background-color: var(--cor-p);
     transition: 0.3s;
 }
-form input[type="submit"]{
+.cadastro-rapido input[type="submit"]{
     margin-left: 8px;
     border: none;
     font-family: var(--font-principal);
     border-radius: 8px;
     padding: 4px;
 }
-form input[type="submit"]:hover{
+.cadastro-rapido input[type="submit"]:hover{
     background-color: var(--cor-t);
     transition: 0.3s;
 }
 @media (max-width: 1000px){
     .div-form{
         flex-direction: column;
+    }
+    .img-carrossel{
+        height: 300px;
     }
 }
 /* explicação da agencia------------- */
@@ -257,5 +264,86 @@ strong{
     box-shadow: 0 0 15px rgba(4, 9, 30, 0.5);
     transform: scale(1.1);
     z-index: 2;
-    
+
+}
+
+
+/* contatos -------------- */
+.background-contato{
+    height: 100%;
+    background-image: url(./img/background-contato.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.width{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-contato{
+    margin: 30px;
+    height: 150vh;
+    width: 50%;
+    background-color: var(--cor-s);
+    border-radius: 10px;
+    opacity: 0.95;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contato{
+    width: 80%;
+    /* o do hover será esse */
+}
+.label-block{
+    display: flex;
+    flex-direction: column;
+}
+.contform{
+    /* background-color: gold; */
+    width: 100%;
+    padding: 1rem;
+}
+.input-contato{
+    outline: none;
+    border: none;
+    font-family: var(--font-principal);
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+.input-contato:focus{
+    background-color: var(--cor-p);
+    border: 1px solid var(--cor-det);
+    box-shadow: 0 0 10px var(--cor-det);
+    opacity: 1;
+}
+.contform input[type="submit"]{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-family: var(--font-principal);
+    border-radius: 8px;
+    padding: 4px;
+}
+.contform input[type="submit"]:hover{
+    background-color: var(--cor-t);
+    opacity: 1;
+    box-shadow: 0 0 10px var(--cor-det);
+    transition: 0.3s;
+}
+@media (max-width: 850px){
+    .section-contato{
+        width: 100%;
+        height: 80vh;
+    }
+}
+.section-icons{
+    margin-top: 2rem;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
 }
