@@ -143,7 +143,7 @@ nav a:hover{
 }
 
 
-/* CONTEUDO ------------------------------------------ */
+/* CONTEUDO HOME ------------------------------------------ */
 .main{
     /* grid-area: m; */
     height: 110vh;
@@ -160,6 +160,7 @@ nav a:hover{
     width:100%; 
     height:500px;
 }
+
 
 /* cadastro rápido---------- */
 .cadastro-rapido{
@@ -228,6 +229,7 @@ nav a:hover{
         height: 300px;
     }
 }
+
 /* explicação da agencia------------- */
 .explicacao{
     margin-top: 100px;
@@ -267,8 +269,42 @@ strong{
 
 }
 
+/* PAGINA DE DESTINO ---------------- */
+/* conteudo-destino----- */
+.textinho{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+.menu-destino{
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.card-titulo{
+    text-decoration: none;
+}
+.desconto{
+    font-size: 12px;
+    text-decoration: line-through;
+    color: red;
+    margin-bottom: 0;
+}
+.card-detalhes{
+    margin-top: 0.5rem;
+}
+.card-detalhes:hover{
+    box-shadow: 0 0 10px var(--cor-det);
+}
+.card-body{
+    height: 45vh;
 
-/* contatos -------------- */
+}
+.car
+
+
+/* PAGINA DE CONTATOS -------------- */
 .background-contato{
     height: 100%;
     background-image: url(./img/background-contato.jpg);
@@ -345,5 +381,5 @@ strong{
 }
 .icons{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between
 }
