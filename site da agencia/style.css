@@ -268,6 +268,14 @@ strong{
     z-index: 2;
 
 }
+/* NOVIDADES NA PAGINA HOME */
+.texto-novidades{
+    background-color: var(--cor-s);
+    padding: 0.5rem;
+}
+.parag-novidade{
+    font-size: 25px;
+}
 
 /* PAGINA DE PROMOÇÕES ------------- */
 .promo{
@@ -439,5 +447,25 @@ strong{
 }
 .icons{
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+}
+/* CADASTRO RAPIDO ------------------- */
+.cadastro{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.div-cpf{
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow:  0 0 18px rgba(0, 0, 0, 0.2);
+    background-color: var(--cor-s);
+}
+.div-cpf .input{
+    margin-top: 2rem;
+    width: 80%;
+}
+.div-cpf input[type=submit]{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
 }
